@@ -19,7 +19,7 @@ const passthroughs = require('./src/config/passthroughs');
 /**
  * Collections are defined as named exports in /src/config/collections.js
  */
-const collections = require('./src/config/collections');
+//const collections = require('./src/config/collections');
 
 /**
  * Watch targets are defined as named exports in /src/config/watchtargets.js
@@ -75,19 +75,19 @@ module.exports = function (eleventyConfig) {
     chalk.gray("(/src/config/collections.js)")
   );
 
-  Object.keys(collections).forEach((collectionName, index) => {
-    let len = Object.keys(collections).length - 1;
-    let pre = (index === len ? "└── " : "├── ");
-    console.log(
-      chalk.white("│       " + pre) +
-      chalk.green(collectionName)
-    );
+  // Object.keys(collections).forEach((collectionName, index) => {
+  //   let len = Object.keys(collections).length - 1;
+  //   let pre = (index === len ? "└── " : "├── ");
+  //   console.log(
+  //     chalk.white("│       " + pre) +
+  //     chalk.green(collectionName)
+  //   );
 
-    collections[collectionName](eleventyConfig);
-  });
+  //   collections[collectionName](eleventyConfig);
+  // });
 
-  console.groupEnd();
-  console.log(chalk.white("  |"));
+  // console.groupEnd();
+  // console.log(chalk.white("  |"));
 
   /**
    * Echo the registered collections in the terminal
@@ -200,6 +200,10 @@ module.exports = function (eleventyConfig) {
     }
 
     return content;
+  });
+
+  eleventyConfig.addCollection("pages", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/content/pages/*.njk");
   });
 
 
