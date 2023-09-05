@@ -19,7 +19,6 @@ const passthroughs = require('./src/config/passthroughs');
 /**
  * Collections are defined as named exports in /src/config/collections.js
  */
-//const collections = require('./src/config/collections');
 
 /**
  * Watch targets are defined as named exports in /src/config/watchtargets.js
@@ -200,10 +199,6 @@ module.exports = function (eleventyConfig) {
     }
 
     return content;
-  });
-
-  eleventyConfig.addCollection("pages", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/content/pages/*.njk");
   });
 
 
