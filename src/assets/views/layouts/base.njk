@@ -27,20 +27,10 @@
   </head>
   <body>
     {# Skip to content link #}
-    <a class="visually-hidden" href="#main">Skip to content</a>
-
-    {# Site header with navigation #}
-    <header>
-      {% include "partials/navigation.njk" %}
-    </header>
+    {# <a class="visually-hidden-focusable" href="#main">Skip to content</a> #}
 
     {# Main content #}
     <main id="main" tabindex="-1">
-      <header id="page-header">
-        <h1>
-          {{ title | safe }}
-        </h1>
-      </header>
       {{ content | safe }}
     </main>
 

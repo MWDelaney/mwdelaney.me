@@ -12,13 +12,13 @@
   */
   --unit: 1rem;
   --container-width: 60ch;
+  --logo: 3rem;
+  --gap: 1rem;
 
   /**
     Fonts
   */
-  --font-family-sans-serif:
-    system,
-    -apple-system;
+  --font: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   @media (prefers-color-scheme: dark) {
     --color-text: #fff;
