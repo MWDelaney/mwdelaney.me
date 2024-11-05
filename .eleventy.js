@@ -42,7 +42,7 @@ import shortcodes from './src/config/shortcodes.js';
 /**
  * Custom template languages are defined as named exports in /src/config/templateLanguages.js
  */
-import templatelanguages from './src/config/templatelanguages.js';
+import templatelanguages from './src/config/templateLanguages.js';
 
 /**
  * Filters are defined as named exports in /src/config/filters.js
